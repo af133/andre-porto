@@ -1,9 +1,10 @@
 import AceTernityLogo from "@/components/logos/aceternity";
 import SlideShow from "@/components/slide-show";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
 import { TypographyH3, TypographyP } from "@/components/ui/typography";
 import { ArrowDownUpIcon, ArrowUpRight, ExternalLink, Link2, MoveUpRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { RiNextjsFill, RiNodejsFill, RiReactjsFill } from "react-icons/ri";
@@ -242,7 +243,7 @@ const PROJECT_SKILLS = {
     title: "OpenAI",
     bg: "black",
     fg: "white",
-    icon: <img src="assets/icons/openai-svgrepo-com_white.svg" alt="OpenAI"/>,
+    icon: <Image src="assets/icons/openai-svgrepo-com_white.svg" alt="OpenAI"/>,
   },
   netlify: {
     title: "Netlify",
@@ -278,7 +279,7 @@ const PROJECT_SKILLS = {
     title: "Java",
     bg: "black",
     fg: "white",
-    icon: <img src="assets/icons/icons8-java.svg" alt="Java"/>,
+    icon: <Image src="assets/icons/icons8-java.svg" alt="Java"/>,
   },
   cplusplus: {
     title: "C++",
@@ -320,8 +321,8 @@ const projects: Project[] = [
       ],
       backend: [],
     },
-    live: "https://syedharif.xyz/",
-    github: "https://github.com/syedharif/",
+    live: "#",
+    github: "https://github.com/af133/",
     get content() {
       return (
         <div>
@@ -338,8 +339,10 @@ const projects: Project[] = [
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/portfolio/landing.png`,
-              `${BASE_PATH}/portfolio/skills.png`,
+              `assets/nav-link-previews/landing.png`,
+              `assets/nav-link-previews/skill.png`,
+              `assets/nav-link-previews/landing.png`,
+              `assets/nav-link-previews/project.png`,
             ]}
           />
           <TypographyH3 className="my-4 mt-8">Space Theme</TypographyH3>
@@ -357,7 +360,7 @@ const projects: Project[] = [
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/portfolio/project.png`,
+              `assets/nav-link-previews/project.png`,
             ]}
           />
           <p className="font-mono mb-2 mt-8 text-center">

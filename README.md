@@ -2,7 +2,7 @@
 <p align="center">
   <a href="https://vercel.com/"><img alt="Vercel" src="https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel"></a>
   <a href="#license"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge"></a>
-  <a href="https://www.linkedin.com/in/syedharif/"><img alt="Linkedin - Syed Harif" src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555"></a>
+  <a href="https://www.linkedin.com/in/andre-firmansyah-636714210/"><img alt="Linkedin - Andre Firmansyah" src="https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555"></a>
 </p>
 
 <a name="top"></a>
@@ -20,7 +20,7 @@
     Professional, modern portfolio showcasing work, technical skills, and a custom 3D Spline keyboard with polished animations and responsive design.
     <br />
     <br />
-    <a href="https://syedharif.xyz"><strong> View Live Preview »</strong></a>
+    <a href="#"><strong> View Live Preview »</strong></a>
   </p>
 </div>
 
@@ -84,7 +84,7 @@ At its core lies a **custom-built 3D interactive keyboard** (<u><a href="https:/
 ### Install
 ```bash
 # clone
-git clone https://github.com/syedharif/project_3D_developer_portfolio.git
+git clone https://github.com/af133/project_3D_developer_portfolio.git
 cd project_3D_developer_portfolio
 
 # install dependencies
@@ -203,14 +203,14 @@ If you have a suggestion that would make this better, please fork the repo and c
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## License
-This project is open source and distributed under the <a href="https://github.com/syedharif/project_3D_developer_portfolio/blob/00f6c3e65efdd430610ff8ef50e533f176e22bfe/LICENSE">MIT License</a>.
+This project is open source and distributed under the <a href="https://github.com/af133/project_3D_developer_portfolio/blob/00f6c3e65efdd430610ff8ef50e533f176e22bfe/LICENSE">MIT License</a>.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Contact
 
-**Syed Harif Fayaz**  |  [LinkedIn](https://linkedin.com/in/syedharif/)  -  [Twitter](https://x.com/syed_harif)  -  [dev.syedharif@gmail.com](mailto:dev.syedharif@gmail.com)
+**Andre Firmansyah**  |  [LinkedIn](https://www.linkedin.com/in/andre-firmansyah-636714210/)  -  [Twitter](#)  -  [af349393@gmail.com](mailto:af349393@gmail.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

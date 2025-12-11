@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { DiMongodb, DiNginx, DiNpm, DiPostgresql, DiVim } from "react-icons/di";
 import {
   FaAws,
@@ -43,26 +44,26 @@ import { TbTerminal2 } from "react-icons/tb";
 const CONTACT_LINKS = [
   {
     name: "Email",
-    content: "syedharif4@gmail",
-    href: "mailto:syedharif4@gmail.com",
+    content: "af349393@gmail",
+    href: "mailto:af349393@gmail.com",
     icon: <FaEnvelope height={"50px"} />,
   },
   {
     name: "Phone",
-    content: "+91 6006106820",
-    href: "tel:+916006106820",
+    content: "+62 85806138261",
+    href: "tel:+6285806138261",
     icon: <FaPhone height={"50px"} />,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/syedharif/",
-    content: "/syedharif",
+    href: "https://www.linkedin.com/in/andre-firmansyah-636714210/",
+    content: "/Andre",
     icon: <FaLinkedin height={"50px"} />,
   },
   {
     name: "GitHub",
-    href: "https://github.com/syedharif",
-    content: "/syedharif",
+    href: "https://github.com/af133",
+    content: "/af133",
     icon: <FaGithub height={"50px"} />,
   },
 ];
@@ -243,15 +244,18 @@ function Page() {
             }}
           >
             <div className="flex flex-row lg:flex-col items-center">
-              <div className="flex justify-center items-center lg:w-full lg:aspect-square bg-zinc-800 rounded-xl lg:mb-5">
-                <img
-                  className="rounded-full p-4 lg:p-10 w-[100px] md:w-[150px] lg:w-[200px] aspect-square  bg-zinc-800"
-                  alt="me"
+              <div className="flex justify-center items-center lg:w-full lg:aspect-square bg-blue-600/20 rounded-xl lg:mb-5">
+                <Image
                   src="/assets/me.jpg"
+                  alt="me"
+                  width={300}           
+                  height={300}          
+                  className="rounded-full p-4 lg:p-10 w-[120px] md:w-[160px] lg:w-[240px] aspect-square bg-blue-700/30 object-cover"
                 />
               </div>
+
               <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
-                <p className="text-center text-xl">Syed Harif</p>
+                <p className="text-center text-xl">Andre FIrmansyah</p>
                 <div className="text-xs bg-zinc-700 w-fit px-3 py-1 rounded-full">
                   Web Developer
                 </div>
@@ -287,7 +291,7 @@ function Page() {
           >
             <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
             <p className="mb-10 text-roboto">
-              Hey there! I&apos;m Syed Harif, a Comp. Sci. Engineer with hands-on experience in Development, DevOps and 
+              Hey there! I&apos;m Andre Firmansyah, Student of Jember University. Engineer with hands-on experience in Development, DevOps and 
               Database management with hands-on experience in deploying & automating workflows, and 
               collaborating with foreign clients. Strong analytical skills,effective communication,
               and a team-oriented approach to driving process improvements and delivering results.
