@@ -333,7 +333,7 @@ const projects: Project[] = [
           <ProjectsLinks live={this.live} repo={this.github} />
           <TypographyH3 className="my-4 mt-8">Beautiful 3D Objects </TypographyH3>
           <p className="font-mono mb-2">
-            Did you see that 3D keyboard model? Yeah! I made that (<u><a href="https://app.spline.design/file/b75b8877-3ed4-45ba-a50f-6e98972e48f7" target="_blank">download here</a></u>). That
+            Did you see that 3D keyboard model? Yeah! I made that (<u><a href="#" target="_blank">download here</a></u>). That
             interactive keyboard is being rendered in 3D on a webpage 🤯, and
             pressing each keycap reveals a skill in a goofy way. It&apos;s like typing - but every keystroke brings design and code together.
           </p>
