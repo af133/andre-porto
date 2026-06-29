@@ -900,7 +900,7 @@ const projects: Project[] = [
       database:[]
     },
     live: "#",
-    github: "https://github.com/af133/",
+    github: "https://github.com/af133/scm_latansa/",
     get content() {
       return (
      <div>
@@ -993,6 +993,236 @@ const projects: Project[] = [
         </p>
       </div>
     </div>
+      );
+    },
+  },
+  { // 08. Portfolio project
+      id: "portfolio 8",
+      category: "Portfolio",
+      title: "Skill Swap",
+      src: "/assets/project/skillswap/Screenshot From 2026-06-29 07-20-11.png",
+      screenshots: ["/assets/project/skillswap/Screenshot From 2026-06-29 07-20-11.png"],
+      skills: {
+        frontend: [
+          PROJECT_SKILLS.tailwind,
+          PROJECT_SKILLS.vite,
+        ],
+        backend: [
+          PROJECT_SKILLS.laravel,
+        ],
+        devops:[],
+        database:[]
+      },
+      live: "https://hackton-production.up.railway.app/",
+      github: "https://github.com/af133/hackton",
+      get content() {
+        return (
+      <div>
+        <TypographyP className="font-mono text-muted-foreground">
+          Selamat datang di{" "}
+          <span className="font-semibold text-primary">SkillSwap</span>, sebuah
+          platform edukasi berbasis gamifikasi yang dirancang untuk menciptakan
+          pengalaman belajar yang lebih interaktif dan kolaboratif. Pengguna dapat
+          berperan sebagai guru maupun murid, memperoleh koin dari aktivitas belajar
+          dan mengajar, serta menukarkannya untuk mengikuti kelas atau memperoleh
+          berbagai keuntungan di dalam platform.
+        </TypographyP>
+
+        <ProjectsLinks live={this.live} repo={this.github} />
+
+        <TypographyH3 className="mt-10 mb-4">
+          🎓 Gamified Learning Platform
+        </TypographyH3>
+
+        <p className="font-mono leading-7 text-muted-foreground">
+          SkillSwap merupakan platform pembelajaran yang menggabungkan konsep
+          gamifikasi dengan sistem pertukaran pengetahuan. Setiap pengguna memiliki
+          kesempatan untuk menjadi pengajar maupun pelajar sesuai keahlian yang
+          dimiliki. Selain itu, platform telah terintegrasi dengan Midtrans untuk
+          mendukung proses pembayaran yang aman dan praktis.
+        </p>
+
+        <SlideShow
+          images={[
+            "/assets/project/skillswap/Screenshot From 2026-06-29 07-20-11.png",
+            
+          ]}
+        />
+
+        <TypographyH3 className="mt-10 mb-4">
+          🚀 Fitur Utama
+        </TypographyH3>
+
+        <ul className="mt-4 space-y-3 font-mono text-muted-foreground list-disc pl-6">
+          <li>🎓 Pengguna dapat berperan sebagai guru maupun murid.</li>
+          <li>🪙 Sistem reward berupa koin sebagai bagian dari gamifikasi.</li>
+          <li>🔄 Penukaran koin untuk mengikuti kelas atau memperoleh benefit tertentu.</li>
+          <li>📚 Manajemen kelas dan materi pembelajaran.</li>
+          <li>👥 Dashboard untuk guru dan murid dengan hak akses berbeda.</li>
+          <li>💳 Integrasi Midtrans untuk pembayaran online.</li>
+          <li>📈 Riwayat transaksi dan aktivitas pengguna.</li>
+          <li>📱 Antarmuka responsif untuk desktop maupun perangkat mobile.</li>
+        </ul>
+
+        <TypographyH3 className="mt-10 mb-4">
+          💳 Payment Gateway Integration
+        </TypographyH3>
+
+        <p className="font-mono leading-7 text-muted-foreground">
+          SkillSwap telah terintegrasi dengan <strong>Midtrans Payment Gateway</strong>
+          untuk memproses pembayaran secara aman dan efisien. Integrasi ini
+          memungkinkan pengguna melakukan transaksi dengan berbagai metode pembayaran,
+          sekaligus mempermudah proses verifikasi pembayaran pada platform.
+        </p>
+
+        <TypographyH3 className="mt-10 mb-4">
+          🎯 Tujuan Pengembangan
+        </TypographyH3>
+
+        <p className="font-mono leading-7 text-muted-foreground">
+          Proyek ini dikembangkan untuk menciptakan ekosistem pembelajaran yang
+          kolaboratif dan menarik melalui pendekatan gamifikasi. Dengan sistem peran
+          ganda sebagai guru maupun murid, mekanisme reward berbasis koin, serta
+          dukungan pembayaran digital melalui Midtrans, SkillSwap memberikan
+          pengalaman belajar yang lebih fleksibel, interaktif, dan memotivasi
+          pengguna untuk terus berbagi pengetahuan.
+        </p>
+
+        <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
+          <p className="font-mono text-lg font-semibold">
+            &quot;Empowering Collaborative Learning through Gamification and Secure
+            Digital Payments.&quot;
+          </p>
+
+          <p className="mt-2 font-mono text-sm text-muted-foreground">
+            — SkillSwap
+          </p>
+        </div>
+      </div>
+      );
+    },
+  },
+  { // 08. Portfolio project
+      id: "portfolio 9",
+      category: "Portfolio",
+      title: "Presensi SMKN 3 Jember",
+      src: "/assets/project/smk3/1.png",
+      screenshots: ["/assets/project/smk3/1.png"],
+      skills: {
+        frontend: [
+          PROJECT_SKILLS.tailwind,
+          PROJECT_SKILLS.vite,
+        ],
+        backend: [
+          PROJECT_SKILLS.laravel,
+        ],
+        devops:[],
+        database:[]
+      },
+      live: "https://jurnal-smk3jember.com",
+      github: "https://github.com/af133/",
+      get content() {
+        return (
+        <div>
+          <TypographyP className="font-mono text-muted-foreground">
+            Selamat datang di{" "}
+            <span className="font-semibold text-primary">
+              Sistem Presensi Siswa SMK Negeri 3 Jember
+            </span>
+            , sebuah aplikasi berbasis web yang dirancang untuk mempermudah proses
+            pencatatan kehadiran siswa secara digital. Sistem ini menerapkan manajemen
+            pengguna berbasis role sehingga administrator dapat mengatur hak akses,
+            permission, dan fitur yang dimiliki oleh setiap pengguna sesuai kebutuhan
+            sekolah.
+          </TypographyP>
+
+          <ProjectsLinks live={this.live} repo={this.github} />
+
+          <TypographyH3 className="mt-10 mb-4">
+            📋 Student Attendance Management System
+          </TypographyH3>
+
+          <p className="font-mono leading-7 text-muted-foreground">
+            Sistem ini dikembangkan untuk mendukung proses presensi siswa di SMK Negeri
+            3 Jember secara lebih efisien dan terstruktur. Terdapat dua role utama,
+            yaitu <strong>Admin</strong> dan <strong>Guru</strong>. Admin bertugas
+            mengelola data pengguna, data guru, data siswa, serta mengatur Role
+            Management dan permission setiap pengguna. Sementara itu, guru bertanggung
+            jawab melakukan presensi siswa sesuai kelas yang diampunya. Hanya pengguna
+            dengan role <strong>Guru</strong> yang memiliki akses untuk melakukan
+            pencatatan kehadiran siswa sehingga keamanan dan validitas data tetap
+            terjaga.
+          </p>
+
+          <SlideShow
+            images={[
+              "/assets/project/smk3/1.png",
+              "/assets/project/smk3/2.png",
+              "/assets/project/smk3/3.png",
+              "/assets/project/smk3/4.png",
+              "/assets/project/smk3/5.png",
+              "/assets/project/smk3/6.png",
+              "/assets/project/smk3/7.png",
+              "/assets/project/smk3/8.png",
+            ]}
+          />
+
+          <TypographyH3 className="mt-10 mb-4">
+            🚀 Fitur Utama
+          </TypographyH3>
+
+          <ul className="mt-4 space-y-3 font-mono text-muted-foreground list-disc pl-6">
+            <li>👤 Manajemen pengguna dengan dua role: Admin dan Guru.</li>
+            <li>🔐 Role Management untuk mengatur hak akses dan permission pengguna.</li>
+            <li>🏫 Manajemen data kelas, guru, dan siswa.</li>
+            <li>📝 Guru dapat melakukan presensi siswa sesuai kelas yang diampu.</li>
+            <li>📅 Pencatatan kehadiran siswa secara real-time.</li>
+            <li>📊 Dashboard admin untuk memantau seluruh aktivitas presensi.</li>
+            <li>📈 Rekapitulasi dan riwayat kehadiran siswa.</li>
+            <li>📄 Pengelolaan data presensi secara terpusat.</li>
+            <li>📱 Antarmuka responsif untuk desktop maupun perangkat mobile.</li>
+          </ul>
+
+          <TypographyH3 className="mt-10 mb-4">
+            🔐 Role-Based Access Control
+          </TypographyH3>
+
+          <p className="font-mono leading-7 text-muted-foreground">
+            Sistem menerapkan mekanisme
+            <strong> Role-Based Access Control (RBAC)</strong> sehingga setiap pengguna
+            hanya dapat mengakses fitur sesuai hak akses yang diberikan. Admin memiliki
+            kewenangan untuk mengelola role, permission, dan data master, sedangkan
+            guru hanya dapat mengakses fitur yang berkaitan dengan proses presensi
+            siswa. Pendekatan ini meningkatkan keamanan sistem sekaligus memastikan
+            setiap pengguna menjalankan tugas sesuai tanggung jawabnya.
+          </p>
+
+          <TypographyH3 className="mt-10 mb-4">
+            🎯 Tujuan Pengembangan
+          </TypographyH3>
+
+          <p className="font-mono leading-7 text-muted-foreground">
+            Proyek ini dikembangkan untuk mendigitalisasi proses presensi siswa di SMK
+            Negeri 3 Jember agar lebih cepat, akurat, dan mudah dikelola. Dengan
+            penerapan Role-Based Access Control (RBAC), pengelolaan pengguna menjadi
+            lebih fleksibel karena administrator dapat menentukan hak akses setiap
+            pengguna. Sistem ini membantu guru dalam melakukan pencatatan kehadiran
+            siswa secara efisien, sekaligus menyediakan laporan dan rekapitulasi yang
+            dapat digunakan sebagai bahan evaluasi oleh pihak sekolah.
+          </p>
+
+          <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
+            <p className="font-mono text-lg font-semibold">
+              &quot;Empowering Digital Student Attendance with Secure Role-Based Access
+              Control.&quot;
+            </p>
+
+            <p className="mt-2 font-mono text-sm text-muted-foreground">
+              — SMK Negeri 3 Jember Student Attendance System
+            </p>
+          </div>
+        </div>
+
       );
     },
   },
