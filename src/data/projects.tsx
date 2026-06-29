@@ -468,8 +468,8 @@ const projects: Project[] = [
 
         <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
           <p className="font-mono text-lg font-semibold">
-            "Sejarah bukan hanya untuk dihafal,
-            tetapi untuk dipahami dan dialami."
+            &quot;Sejarah bukan hanya untuk dihafal,
+            tetapi untuk dipahami dan dialami.&quot;
           </p>
           <p className="mt-2 font-mono text-sm text-muted-foreground">
             — Histoplay
@@ -522,8 +522,8 @@ const projects: Project[] = [
         GeoGenZ merupakan bagian dari penelitian
         <span className="font-semibold">
           {" "}
-          "Model Geoinformatika untuk Analisis Persepsi Generasi Z terhadap Potensi
-          Wilayah Lokal Kabupaten Jember"
+          &quot;Model Geoinformatika untuk Analisis Persepsi Generasi Z terhadap Potensi
+          Wilayah Lokal Kabupaten Jember&quot;
         </span>.
         Platform ini dirancang untuk mengumpulkan data survei geotagged,
         memvisualisasikan persebaran responden pada peta interaktif, serta
@@ -572,8 +572,8 @@ const projects: Project[] = [
 
       <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
         <p className="font-mono text-lg font-semibold">
-          "Menghubungkan data sosial dan informasi geospasial menjadi insight yang
-          bermanfaat melalui teknologi WebGIS."
+          &quot;Menghubungkan data sosial dan informasi geospasial menjadi insight yang
+          bermanfaat melalui teknologi WebGIS.&quot;
         </p>
 
         <p className="mt-2 font-mono text-sm text-muted-foreground">
@@ -681,8 +681,8 @@ const projects: Project[] = [
 
       <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
         <p className="font-mono text-lg font-semibold">
-          "Mendeteksi fraud secara cerdas, menjelaskan setiap keputusan, dan
-          menjaga integritas data melalui teknologi blockchain."
+            &quot;Mendeteksi fraud secara cerdas, menjelaskan setiap keputusan, dan
+          menjaga integritas data melalui teknologi blockchain.&quot;
         </p>
 
         <p className="mt-2 font-mono text-sm text-muted-foreground">
@@ -776,8 +776,103 @@ const projects: Project[] = [
 
         <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
           <p className="font-mono text-lg font-semibold">
-            "Membangun identitas digital yang profesional melalui website modern,
-            responsif, dan mudah dikelola."
+              &quot;Membangun identitas digital yang profesional melalui website modern,
+            responsif, dan mudah dikelola.&quot;
+          </p>
+
+          <p className="mt-2 font-mono text-sm text-muted-foreground">
+            — RancanginDigital
+          </p>
+        </div>
+      </div>
+      );
+    },
+  },
+  { // 06. Portfolio project
+    id: "portfolio 6",
+    category: "Portfolio",
+    title: "SisterNav ",
+    src: "/assets/project/rancangindigital/1.png",
+    screenshots: ["assets/project/rancangindigital/1.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+      ],
+      backend: [
+        PROJECT_SKILLS.laravel,
+      ],
+      devops:[],
+      database:[]
+    },
+    live: "https://rancangindigital.my.id",
+    github: "https://github.com/af133/",
+    get content() {
+      return (
+     <div>
+        <TypographyP className="font-mono text-muted-foreground">
+          Selamat datang di <span className="font-semibold text-primary">Rancangin Digital</span>,
+          sebuah website company profile modern yang dilengkapi dengan Content
+          Management System (CMS) untuk memudahkan pengelolaan konten. Website ini
+          dirancang dengan tampilan yang profesional, responsif, dan mendukung
+          dua bahasa (Indonesia & English) sehingga dapat menjangkau audiens yang
+          lebih luas.
+        </TypographyP>
+
+        <ProjectsLinks live={this.live} repo={this.github} />
+
+        <TypographyH3 className="mt-10 mb-4">
+          🌐 Website Company Profile Modern
+        </TypographyH3>
+
+        <p className="font-mono leading-7 text-muted-foreground">
+          RancanginDigital menghadirkan website company profile yang berfokus pada
+          pengalaman pengguna dan kemudahan pengelolaan konten. Seluruh informasi
+          perusahaan dapat diperbarui melalui dashboard CMS tanpa perlu melakukan
+          perubahan langsung pada source code.
+        </p>
+
+        <SlideShow
+          images={[
+            "/assets/project/rancangindigital/1.png",
+            "/assets/project/rancangindigital/2.png",
+            "/assets/project/rancangindigital/3.png",
+            "/assets/project/rancangindigital/4.png",
+            "/assets/project/rancangindigital/5.png",
+            "/assets/project/rancangindigital/6.png",
+            "/assets/project/rancangindigital/7.png",
+          ]}
+        />
+
+        <TypographyH3 className="mt-10 mb-4">
+          🚀 Fitur Utama
+        </TypographyH3>
+
+        <ul className="mt-4 space-y-3 font-mono text-muted-foreground list-disc pl-6">
+          <li>🏠 Halaman Beranda yang modern dan responsif.</li>
+          <li>💼 Halaman Layanan untuk menampilkan jasa yang ditawarkan.</li>
+          <li>📂 Portfolio untuk menampilkan hasil pekerjaan perusahaan.</li>
+          <li>🏢 Halaman Tentang Kami yang berisi profil perusahaan.</li>
+          <li>⭐ Testimoni pelanggan sebagai bukti kepercayaan.</li>
+          <li>🌍 Dukungan multi-bahasa (Bahasa Indonesia & English).</li>
+          <li>🛠️ Dashboard CMS untuk mengelola seluruh konten website.</li>
+          <li>📱 Tampilan responsif di desktop, tablet, dan mobile.</li>
+        </ul>
+        <TypographyH3 className="mt-10 mb-4">
+          🎯 Tujuan Pengembangan
+        </TypographyH3>
+
+        <p className="font-mono leading-7 text-muted-foreground">
+          RancanginDigital dikembangkan untuk membantu perusahaan membangun identitas
+          digital yang profesional melalui website company profile yang informatif,
+          mudah dikelola, serta mampu menjangkau pengunjung dari berbagai negara
+          melalui dukungan dua bahasa.
+        </p>
+
+        <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
+          <p className="font-mono text-lg font-semibold">
+            &quot;Membangun identitas digital yang profesional melalui website modern,
+            responsif, dan mudah dikelola.&quot;
           </p>
 
           <p className="mt-2 font-mono text-sm text-muted-foreground">
