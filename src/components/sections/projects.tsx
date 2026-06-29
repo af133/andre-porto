@@ -35,9 +35,9 @@ const ProjectsSection = () => {
           PROJECTS
         </h2>
         {/* edit 2: add p tag, later: remove p tag  */}
-        <p className="mx-auto mt-1 mb-8 line-clamp-1 max-w-3xl font-normal text-base text-center text-neutral-300">
+        {/* <p className="mx-auto mt-1 mb-8 line-clamp-1 max-w-3xl font-normal text-base text-center text-neutral-300">
           (Update soon)
-        </p>
+        </p> */}
       </Link>
       <div className="grid grid-cols-1 md:grid-cols-3">
         {projects.map((project, index) => (
@@ -128,6 +128,22 @@ const ProjectContents = ({ project }: { project: Project }) => {
               Backend
             </p>
             <FloatingDock items={project.skills.backend} />
+          </div>
+        )}
+         {project.skills.devops?.length > 0 && (
+          <div className="flex flex-row md:flex-col-reverse justify-center items-center gap-2 text-3xl mb-8">
+            <p className="text-sm mt-1 text-neutral-600 dark:text-neutral-500">
+              DevOps
+            </p>
+            <FloatingDock items={project.skills.devops} />
+          </div>
+        )}
+        {project.skills.database?.length > 0 && (
+          <div className="flex flex-row md:flex-col-reverse justify-center items-center gap-2 text-3xl mb-8">
+            <p className="text-sm mt-1 text-neutral-600 dark:text-neutral-500">
+              Database
+            </p>
+            <FloatingDock items={project.skills.database} />
           </div>
         )}
       </div>

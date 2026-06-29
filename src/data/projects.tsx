@@ -36,6 +36,8 @@ import {
   SiApachemaven,
   SiCplusplus,
   SiArduino,
+  SiLaravel,
+  SiGo,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import css from "styled-jsx/css";
@@ -281,6 +283,18 @@ const PROJECT_SKILLS = {
     fg: "white",
     icon: <Image src="assets/icons/icons8-java.svg" alt="Java"/>,
   },
+  laravel: {
+    title: "Laravel",
+    bg: "black",
+    fg: "white",
+    icon:<SiLaravel/>,
+  },
+  golang: {
+    title: "Golang",
+    bg: "black",
+    fg: "white",
+    icon:<SiGo/>,
+  },
   cplusplus: {
     title: "C++",
     bg: "black",
@@ -300,7 +314,7 @@ export type Project = {
   title: string;
   src: string;
   screenshots: string[];
-  skills: { frontend: Skill[]; backend: Skill[] };
+  skills: { frontend: Skill[]; backend: Skill[]; devops:Skill[];database:Skill[] };
   content: React.ReactNode | any;
   github?: string;
   live: string;
@@ -319,7 +333,10 @@ const projects: Project[] = [
         PROJECT_SKILLS.tailwind,
         PROJECT_SKILLS.framerMotion,
       ],
-      backend: [],
+      backend: []
+      ,
+      devops:[],
+      database:[],
     },
     live: "#",
     github: "https://github.com/af133/",
@@ -339,10 +356,9 @@ const projects: Project[] = [
           </p>
           <SlideShow
             images={[
-              `assets/nav-link-previews/landing.png`,
-              `assets/nav-link-previews/skill.png`,
-              `assets/nav-link-previews/landing.png`,
-              `assets/nav-link-previews/project.png`,
+              `/assets/nav-link-previews/landing.png`,
+              `/assets/nav-link-previews/skill.png`,
+              `/assets/nav-link-previews/project.png`,
             ]}
           />
           <TypographyH3 className="my-4 mt-8">Space Theme</TypographyH3>
@@ -360,7 +376,7 @@ const projects: Project[] = [
           </p>
           <SlideShow
             images={[
-              `assets/nav-link-previews/project.png`,
+              `/assets/nav-link-previews/project.png`,
             ]}
           />
           <p className="font-mono mb-2 mt-8 text-center">
@@ -370,58 +386,407 @@ const projects: Project[] = [
       );
     },
   },
+  { // 02. Portfolio project
+    id: "portfolio 2",
+    category: "Portfolio",
+    title: "Histoplay",
+    src: "/assets/project/histoplay/1.png",
+    screenshots: ["assets/project/histoplay/1.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+      ],
+      backend: [PROJECT_SKILLS.node],
+      devops:[],
+      database:[PROJECT_SKILLS.firebase],
+    },
+    live: "https://histoplay.vercel.app/",
+    github: "https://github.com/Saptamabar/HistoPlay",
+    get content() {
+      return (
+      <div>
+        <TypographyP className="font-mono text-muted-foreground">
+          🇮🇩 Selamat datang di <span className="font-semibold text-primary">Histoplay</span>,
+          platform pembelajaran sejarah Indonesia berbasis gamifikasi yang mengubah
+          proses belajar menjadi pengalaman yang lebih interaktif, seru, dan penuh tantangan.
+        </TypographyP>
 
-// { // 02. Project 2
-//     id: "category",
-//     category: "Category",
-//     title: "title",
-//     src: "/assets/projects-screenshots",
-//     screenshots: ["/assets/projects-screenshots"],
-//     skills: {
-//       frontend: [
-//         PROJECT_SKILLS.ts,
-//         PROJECT_SKILLS.next,
-//         PROJECT_SKILLS.tailwind,
-//         PROJECT_SKILLS.framerMotion,
-//       ],
-//       backend: [],
-//     },
-//     live: "https://live",
-//     github: "https://github.com/",
-//     get content() {
-//       return (
-//         <div>
-//           <TypographyP className="font-mono text-2xl text-center">
-//             Centered Heading
-//           </TypographyP>
-//           <TypographyP className="font-mono ">
-//             Welcome to my digital playground, where creativity meets code in the
-//             dopest way possible.
-//           </TypographyP>
-//           <ProjectsLinks live={this.live} repo={this.github} />
-//           <TypographyH3 className="my-4 mt-8">Heading 3 </TypographyH3>
-//           <p className="font-mono mb-2">
-//             Desciption 2
-//           </p>
-//           <SlideShow
-//             images={[
-//               `${BASE_PATH}`,
-//               `${BASE_PATH}`,
-//             ]}
-//           />
-//           <TypographyH3 className="my-4 mt-8">Heading 3</TypographyH3>
-//           <p className="font-mono mb-2">
-//           Description 3
-//           </p>
-//           <SlideShow
-//             images={[
-//               `${BASE_PATH}`,
-//               `${BASE_PATH}`,
-//             ]}
-//           />
-//         </div>
-//       );
-//     },
-//   },
+        <ProjectsLinks live={this.live} repo={this.github} />
+
+        <TypographyH3 className="mt-10 mb-4">
+          Belajar Sejarah Jadi Lebih Menyenangkan
+        </TypographyH3>
+
+        <p className="font-mono leading-7 text-muted-foreground">
+          Pernah merasa belajar sejarah hanya tentang menghafal tanggal dan nama tokoh?
+          Kami juga pernah merasakannya. Histoplay hadir untuk mengubah cara belajar
+          sejarah melalui pengalaman yang lebih visual, interaktif, dan menyenangkan.
+          Dengan berbagai tantangan dan alur pembelajaran yang menarik, memahami
+          perjalanan bangsa Indonesia menjadi jauh lebih mudah dan tidak membosankan.
+        </p>
+
+        <SlideShow
+          images={[
+            "/assets/project/histoplay/1.png",
+            "/assets/project/histoplay/2.png",
+            "/assets/project/histoplay/3.png",
+            "/assets/project/histoplay/4.png",
+            "/assets/project/histoplay/5.png",
+            "/assets/project/histoplay/6.png",
+          ]}
+        />
+
+        <TypographyH3 className="mt-10 mb-4">
+          ✨ Fitur Unggulan
+        </TypographyH3>
+
+        <p className="font-mono leading-7 text-muted-foreground">
+          Histoplay dirancang dengan antarmuka modern dan pengalaman belajar yang
+          intuitif. Pengguna dapat menjelajahi materi sejarah, menyelesaikan berbagai
+          tantangan, memperoleh pencapaian (achievement), serta menguji pemahaman
+          melalui kuis interaktif yang dikemas seperti sebuah permainan.
+        </p>
+        <SlideShow
+          images={[
+            "/assets/nav-link-previews/histoplay/1.png",
+          ]}
+        />
+
+        <TypographyH3 className="mt-10 mb-4">
+          🎯 Tujuan Pengembangan
+        </TypographyH3>
+
+        <p className="font-mono leading-7 text-muted-foreground">
+          Histoplay dikembangkan dengan harapan dapat meningkatkan minat masyarakat,
+          khususnya generasi muda, terhadap sejarah Indonesia. Kami percaya bahwa
+          belajar tidak harus membosankan. Dengan memadukan unsur edukasi dan
+          gamifikasi, Histoplay menghadirkan pengalaman belajar yang lebih efektif,
+          menyenangkan, dan mudah diingat.
+        </p>
+
+        <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
+          <p className="font-mono text-lg font-semibold">
+            "Sejarah bukan hanya untuk dihafal,
+            tetapi untuk dipahami dan dialami."
+          </p>
+          <p className="mt-2 font-mono text-sm text-muted-foreground">
+            — Histoplay
+          </p>
+        </div>
+      </div>
+      );
+    },
+  },
+  { // 03. Portfolio project
+    id: "portfolio 3",
+    category: "Portfolio",
+    title: "Geogenz",
+    src: "/assets/project/geogenz/1.png",
+    screenshots: ["assets/project/geogenz/1.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+      ],
+      backend: [
+        PROJECT_SKILLS.node,
+      ],
+      devops:[],
+      database:[ PROJECT_SKILLS.firebase,],
+    },
+    live: "https://geogenz.com",
+    github: "https://github.com/af133/survey-jember",
+    get content() {
+      return (
+      <div>
+      <TypographyP className="font-mono text-muted-foreground">
+        Selamat datang di <span className="font-semibold text-primary">GeoGenZ</span>,
+        platform penelitian berbasis WebGIS yang dikembangkan untuk menganalisis
+        persepsi Generasi Z terhadap sektor pertanian di Kabupaten Jember. Platform
+        ini mengintegrasikan survei digital, visualisasi data spasial, dashboard
+        analitik, serta peta interaktif untuk mendukung pengambilan keputusan
+        berbasis geospasial.
+      </TypographyP>
+
+      <ProjectsLinks live={this.live} repo={this.github} />
+
+      <TypographyH3 className="mt-10 mb-4">
+        🌍 Platform Penelitian Berbasis WebGIS
+      </TypographyH3>
+
+      <p className="font-mono leading-7 text-muted-foreground">
+        GeoGenZ merupakan bagian dari penelitian
+        <span className="font-semibold">
+          {" "}
+          "Model Geoinformatika untuk Analisis Persepsi Generasi Z terhadap Potensi
+          Wilayah Lokal Kabupaten Jember"
+        </span>.
+        Platform ini dirancang untuk mengumpulkan data survei geotagged,
+        memvisualisasikan persebaran responden pada peta interaktif, serta
+        mengintegrasikan data sosial dan spasial dalam satu sistem berbasis web.
+      </p>
+
+      <SlideShow
+        images={[
+          "/assets/project/geogenz/1.png",
+          "/assets/project/geogenz/2.png",
+          "/assets/project/geogenz/3.png",
+          "/assets/project/geogenz/4.png",
+          "/assets/project/geogenz/5.png",
+          "/assets/project/geogenz/6.png",
+        ]}
+      />
+
+      <TypographyH3 className="mt-10 mb-4">
+        🚀 Fitur Utama
+      </TypographyH3>
+
+      <p className="font-mono leading-7 text-muted-foreground">
+        Platform ini menyediakan beberapa fitur utama untuk mendukung proses
+        penelitian, di antaranya:
+      </p>
+
+      <ul className="mt-4 space-y-3 font-mono text-muted-foreground list-disc pl-6">
+        <li>📝 Survei digital berbasis lokasi (Geotagged Survey).</li>
+        <li>🗺️ Interactive Map menggunakan Leaflet dan OpenStreetMap.</li>
+        <li>📊 Dashboard analitik untuk visualisasi hasil survei.</li>
+        <li>📈 Grafik statistik menggunakan Chart.js.</li>
+        <li>👨‍💼 Dashboard Admin untuk mengelola responden dan data penelitian.</li>
+        <li>📍 Visualisasi persebaran responden dan analisis spasial.</li>
+      </ul>
+      <TypographyH3 className="mt-10 mb-4">
+        🎯 Kontribusi Saya
+      </TypographyH3>
+
+      <p className="font-mono leading-7 text-muted-foreground">
+        Sebagai <span className="font-semibold">Asisten Peneliti</span>, saya
+        berkontribusi dalam merancang dan mengembangkan keseluruhan platform
+        GeoGenZ, mulai dari implementasi antarmuka pengguna, dashboard admin,
+        sistem survei, integrasi Firebase, visualisasi data, hingga pengembangan
+        peta interaktif berbasis WebGIS untuk mendukung analisis penelitian.
+      </p>
+
+      <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
+        <p className="font-mono text-lg font-semibold">
+          "Menghubungkan data sosial dan informasi geospasial menjadi insight yang
+          bermanfaat melalui teknologi WebGIS."
+        </p>
+
+        <p className="mt-2 font-mono text-sm text-muted-foreground">
+          — GeoGenZ Research Platform
+        </p>
+      </div>
+      </div>
+      );
+    },
+  },
+  { // 04. Portfolio project
+    id: "portfolio 4",
+    category: "Portfolio",
+    title: "Trustchain AI",
+    src: "/assets/project/trustchain/1.png",
+    screenshots: ["assets/project/trustchain/1.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.firebase,
+        PROJECT_SKILLS.vite,
+        
+      ],
+      backend: [PROJECT_SKILLS.golang,],
+      devops:[PROJECT_SKILLS.docker],
+      database: [PROJECT_SKILLS.firebase,],
+
+    },
+    live: "https://trustchain.com",
+    github: "https://github.com/af133/",
+    get content() {
+      return (
+      <div>
+      <TypographyP className="font-mono text-muted-foreground">
+        Selamat datang di <span className="font-semibold text-primary">TrustChain</span>,
+        platform deteksi penipuan transaksi keuangan secara real-time yang
+        menggabungkan kecerdasan buatan, Explainable AI, dan teknologi blockchain
+        untuk membantu mengidentifikasi aktivitas transaksi yang mencurigakan secara
+        cepat, akurat, dan transparan.
+      </TypographyP>
+
+      <ProjectsLinks live={this.live} repo={this.github} />
+
+      <TypographyH3 className="mt-10 mb-4">
+        🛡️ Deteksi Fraud Berbasis AI
+      </TypographyH3>
+
+      <p className="font-mono leading-7 text-muted-foreground">
+        TrustChain memanfaatkan kombinasi model <span className="font-semibold">LSTM (Long Short-Term Memory)</span>
+        dan <span className="font-semibold">Isolation Forest</span> untuk mendeteksi
+        anomali pada transaksi keuangan secara real-time. Selain menghasilkan
+        prediksi, sistem juga menyediakan penjelasan terhadap setiap keputusan
+        menggunakan <span className="font-semibold">SHAP (SHapley Additive Explanations)</span>,
+        sehingga proses deteksi menjadi lebih transparan dan mudah dipahami.
+      </p>
+
+      <SlideShow
+        images={[
+          "/assets/project/trustchain/1.png",
+          "/assets/project/trustchain/2.png",
+          "/assets/project/trustchain/3.png",
+          "/assets/project/trustchain/4.png",
+          "/assets/project/trustchain/5.png",
+          "/assets/project/trustchain/6.png",
+          "/assets/project/trustchain/7.png"
+        ]}
+      />
+
+      <TypographyH3 className="mt-10 mb-4">
+        🚀 Fitur Utama
+      </TypographyH3>
+
+      <ul className="mt-4 space-y-3 font-mono text-muted-foreground list-disc pl-6">
+        <li>⚡ Deteksi fraud transaksi secara real-time.</li>
+        <li>🧠 Ensemble Machine Learning menggunakan LSTM dan Isolation Forest.</li>
+        <li>🔍 Explainable AI dengan SHAP untuk menjelaskan hasil prediksi.</li>
+        <li>⛓️ Blockchain audit trail untuk menjaga integritas riwayat transaksi.</li>
+        <li>📊 Dashboard analitik untuk monitoring transaksi dan aktivitas fraud.</li>
+        <li>🚨 Sistem notifikasi terhadap transaksi berisiko tinggi.</li>
+      </ul>
+
+      <TypographyH3 className="mt-10 mb-4">
+        💻 Teknologi yang Digunakan
+      </TypographyH3>
+
+      <p className="font-mono leading-7 text-muted-foreground">
+        TrustChain dikembangkan dengan memanfaatkan teknologi modern pada bidang
+        pengembangan web, machine learning, explainable AI, dan blockchain untuk
+        menghasilkan sistem yang aman, cepat, dan mudah dianalisis.
+      </p>
+
+      <TypographyH3 className="mt-10 mb-4">
+        🎯 Tujuan Pengembangan
+      </TypographyH3>
+
+      <p className="font-mono leading-7 text-muted-foreground">
+        Tujuan utama TrustChain adalah membantu institusi keuangan mendeteksi
+        transaksi yang berpotensi fraud secara lebih dini. Dengan mengombinasikan
+        kecerdasan buatan, interpretabilitas model, dan pencatatan berbasis
+        blockchain, platform ini mampu meningkatkan keamanan transaksi sekaligus
+        membangun kepercayaan terhadap proses pengambilan keputusan sistem.
+      </p>
+
+      <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
+        <p className="font-mono text-lg font-semibold">
+          "Mendeteksi fraud secara cerdas, menjelaskan setiap keputusan, dan
+          menjaga integritas data melalui teknologi blockchain."
+        </p>
+
+        <p className="mt-2 font-mono text-sm text-muted-foreground">
+          — TrustChain
+        </p>
+      </div>
+    </div>
+      );
+    },
+  },
+  { // 05. Portfolio project
+    id: "portfolio 5",
+    category: "Portfolio",
+    title: "Rancangin Digital",
+    src: "/assets/project/rancangindigital/1.png",
+    screenshots: ["assets/project/rancangindigital/1.png"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+      ],
+      backend: [
+        PROJECT_SKILLS.laravel,
+      ],
+      devops:[],
+      database:[]
+    },
+    live: "https://rancangindigital.my.id",
+    github: "https://github.com/af133/",
+    get content() {
+      return (
+     <div>
+        <TypographyP className="font-mono text-muted-foreground">
+          Selamat datang di <span className="font-semibold text-primary">Rancangin Digital</span>,
+          sebuah website company profile modern yang dilengkapi dengan Content
+          Management System (CMS) untuk memudahkan pengelolaan konten. Website ini
+          dirancang dengan tampilan yang profesional, responsif, dan mendukung
+          dua bahasa (Indonesia & English) sehingga dapat menjangkau audiens yang
+          lebih luas.
+        </TypographyP>
+
+        <ProjectsLinks live={this.live} repo={this.github} />
+
+        <TypographyH3 className="mt-10 mb-4">
+          🌐 Website Company Profile Modern
+        </TypographyH3>
+
+        <p className="font-mono leading-7 text-muted-foreground">
+          RancanginDigital menghadirkan website company profile yang berfokus pada
+          pengalaman pengguna dan kemudahan pengelolaan konten. Seluruh informasi
+          perusahaan dapat diperbarui melalui dashboard CMS tanpa perlu melakukan
+          perubahan langsung pada source code.
+        </p>
+
+        <SlideShow
+          images={[
+            "/assets/project/rancangindigital/1.png",
+            "/assets/project/rancangindigital/2.png",
+            "/assets/project/rancangindigital/3.png",
+            "/assets/project/rancangindigital/4.png",
+            "/assets/project/rancangindigital/5.png",
+            "/assets/project/rancangindigital/6.png",
+            "/assets/project/rancangindigital/7.png",
+          ]}
+        />
+
+        <TypographyH3 className="mt-10 mb-4">
+          🚀 Fitur Utama
+        </TypographyH3>
+
+        <ul className="mt-4 space-y-3 font-mono text-muted-foreground list-disc pl-6">
+          <li>🏠 Halaman Beranda yang modern dan responsif.</li>
+          <li>💼 Halaman Layanan untuk menampilkan jasa yang ditawarkan.</li>
+          <li>📂 Portfolio untuk menampilkan hasil pekerjaan perusahaan.</li>
+          <li>🏢 Halaman Tentang Kami yang berisi profil perusahaan.</li>
+          <li>⭐ Testimoni pelanggan sebagai bukti kepercayaan.</li>
+          <li>🌍 Dukungan multi-bahasa (Bahasa Indonesia & English).</li>
+          <li>🛠️ Dashboard CMS untuk mengelola seluruh konten website.</li>
+          <li>📱 Tampilan responsif di desktop, tablet, dan mobile.</li>
+        </ul>
+        <TypographyH3 className="mt-10 mb-4">
+          🎯 Tujuan Pengembangan
+        </TypographyH3>
+
+        <p className="font-mono leading-7 text-muted-foreground">
+          RancanginDigital dikembangkan untuk membantu perusahaan membangun identitas
+          digital yang profesional melalui website company profile yang informatif,
+          mudah dikelola, serta mampu menjangkau pengunjung dari berbagai negara
+          melalui dukungan dua bahasa.
+        </p>
+
+        <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
+          <p className="font-mono text-lg font-semibold">
+            "Membangun identitas digital yang profesional melalui website modern,
+            responsif, dan mudah dikelola."
+          </p>
+
+          <p className="mt-2 font-mono text-sm text-muted-foreground">
+            — RancanginDigital
+          </p>
+        </div>
+      </div>
+      );
+    },
+  },
 ];
 export default projects;
