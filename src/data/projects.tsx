@@ -792,8 +792,8 @@ const projects: Project[] = [
     id: "portfolio 6",
     category: "Portfolio",
     title: "SisterNav ",
-    src: "/assets/project/rancangindigital/1.png",
-    screenshots: ["assets/project/rancangindigital/1.png"],
+    src: "/assets/project/sisternav/1.png",
+    screenshots: ["assets/project/sisternav/1.png"],
     skills: {
       frontend: [
         PROJECT_SKILLS.tailwind,
@@ -805,81 +805,80 @@ const projects: Project[] = [
       devops:[],
       database:[]
     },
-    live: "https://rancangindigital.my.id",
+    live: "https://sisternav.com",
     github: "https://github.com/af133/",
     get content() {
       return (
      <div>
-        <TypographyP className="font-mono text-muted-foreground">
-          Selamat datang di <span className="font-semibold text-primary">Rancangin Digital</span>,
-          sebuah website company profile modern yang dilengkapi dengan Content
-          Management System (CMS) untuk memudahkan pengelolaan konten. Website ini
-          dirancang dengan tampilan yang profesional, responsif, dan mendukung
-          dua bahasa (Indonesia & English) sehingga dapat menjangkau audiens yang
-          lebih luas.
-        </TypographyP>
+      <TypographyP className="font-mono text-muted-foreground">
+        Selamat datang di{" "}
+        <span className="font-semibold text-primary">Sister Nav</span>, sebuah
+        website company profile yang dikembangkan untuk membantu perusahaan
+        menampilkan informasi bisnis secara profesional sekaligus memudahkan
+        pengelolaan konten melalui Content Management System (CMS). Website ini
+        dirancang responsif sehingga memberikan pengalaman pengguna yang optimal di
+        berbagai perangkat.
+      </TypographyP>
 
-        <ProjectsLinks live={this.live} repo={this.github} />
+      <ProjectsLinks live={this.live} repo={this.github} />
 
-        <TypographyH3 className="mt-10 mb-4">
-          🌐 Website Company Profile Modern
-        </TypographyH3>
+      <TypographyH3 className="mt-10 mb-4">
+        🌐 Website Company Profile dengan CMS
+      </TypographyH3>
 
-        <p className="font-mono leading-7 text-muted-foreground">
-          RancanginDigital menghadirkan website company profile yang berfokus pada
-          pengalaman pengguna dan kemudahan pengelolaan konten. Seluruh informasi
-          perusahaan dapat diperbarui melalui dashboard CMS tanpa perlu melakukan
-          perubahan langsung pada source code.
+      <p className="font-mono leading-7 text-muted-foreground">
+        Sister Nav merupakan proyek website company profile yang dikembangkan untuk
+        kebutuhan klien. Website ini memungkinkan administrator mengelola seluruh
+        informasi perusahaan melalui dashboard CMS, sehingga pembaruan konten dapat
+        dilakukan dengan mudah tanpa perlu melakukan perubahan langsung pada source
+        code.
+      </p>
+
+      <SlideShow
+        images={[
+          "/assets/project/sisternav/1.png",
+          "/assets/project/sisternav/2.png",
+          "/assets/project/sisternav/3.png",
+          "/assets/project/sisternav/4.png",
+        ]}
+      />
+
+      <TypographyH3 className="mt-10 mb-4">
+        🚀 Fitur Utama
+      </TypographyH3>
+
+      <ul className="mt-4 space-y-3 font-mono text-muted-foreground list-disc pl-6">
+        <li>🏠 Landing page modern dengan desain profesional.</li>
+        <li>🏢 Halaman profil perusahaan.</li>
+        <li>💼 Halaman layanan yang dapat dikelola melalui CMS.</li>
+        <li>📰 Manajemen konten melalui dashboard CMS.</li>
+        <li>📂 Galeri atau portfolio perusahaan.</li>
+        <li>📞 Halaman kontak/tentang perusahaan untuk memudahkan komunikasi dengan pelanggan.</li>
+        <li>📱 Desain responsif untuk desktop, tablet, dan mobile.</li>
+      </ul>
+
+      <TypographyH3 className="mt-10 mb-4">
+        🎯 Tujuan Pengembangan
+      </TypographyH3>
+
+      <p className="font-mono leading-7 text-muted-foreground">
+        Proyek ini dikembangkan untuk memberikan solusi digital bagi klien dalam
+        membangun citra perusahaan yang profesional di dunia digital. Dengan
+        dashboard CMS, pengelolaan konten menjadi lebih efisien sehingga informasi
+        perusahaan dapat diperbarui kapan saja tanpa memerlukan bantuan developer.
+      </p>
+
+      <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
+        <p className="font-mono text-lg font-semibold">
+          &quot;Professional Company Profile with an Easy-to-Manage Content
+          Management System.&quot;
         </p>
 
-        <SlideShow
-          images={[
-            "/assets/project/rancangindigital/1.png",
-            "/assets/project/rancangindigital/2.png",
-            "/assets/project/rancangindigital/3.png",
-            "/assets/project/rancangindigital/4.png",
-            "/assets/project/rancangindigital/5.png",
-            "/assets/project/rancangindigital/6.png",
-            "/assets/project/rancangindigital/7.png",
-          ]}
-        />
-
-        <TypographyH3 className="mt-10 mb-4">
-          🚀 Fitur Utama
-        </TypographyH3>
-
-        <ul className="mt-4 space-y-3 font-mono text-muted-foreground list-disc pl-6">
-          <li>🏠 Halaman Beranda yang modern dan responsif.</li>
-          <li>💼 Halaman Layanan untuk menampilkan jasa yang ditawarkan.</li>
-          <li>📂 Portfolio untuk menampilkan hasil pekerjaan perusahaan.</li>
-          <li>🏢 Halaman Tentang Kami yang berisi profil perusahaan.</li>
-          <li>⭐ Testimoni pelanggan sebagai bukti kepercayaan.</li>
-          <li>🌍 Dukungan multi-bahasa (Bahasa Indonesia & English).</li>
-          <li>🛠️ Dashboard CMS untuk mengelola seluruh konten website.</li>
-          <li>📱 Tampilan responsif di desktop, tablet, dan mobile.</li>
-        </ul>
-        <TypographyH3 className="mt-10 mb-4">
-          🎯 Tujuan Pengembangan
-        </TypographyH3>
-
-        <p className="font-mono leading-7 text-muted-foreground">
-          RancanginDigital dikembangkan untuk membantu perusahaan membangun identitas
-          digital yang profesional melalui website company profile yang informatif,
-          mudah dikelola, serta mampu menjangkau pengunjung dari berbagai negara
-          melalui dukungan dua bahasa.
+        <p className="mt-2 font-mono text-sm text-muted-foreground">
+          — Sister Nav
         </p>
-
-        <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
-          <p className="font-mono text-lg font-semibold">
-            &quot;Membangun identitas digital yang profesional melalui website modern,
-            responsif, dan mudah dikelola.&quot;
-          </p>
-
-          <p className="mt-2 font-mono text-sm text-muted-foreground">
-            — RancanginDigital
-          </p>
-        </div>
       </div>
+    </div>
       );
     },
   },
