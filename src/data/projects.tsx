@@ -882,5 +882,119 @@ const projects: Project[] = [
       );
     },
   },
+  { // 07. Portfolio project
+    id: "portfolio 7",
+    category: "Portfolio",
+    title: "SCM Latansa",
+    src: "/assets/project/scm/1.jpg",
+    screenshots: ["assets/project/scm/1.jpg"],
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.vite,
+      ],
+      backend: [
+        PROJECT_SKILLS.laravel,
+      ],
+      devops:[],
+      database:[]
+    },
+    live: "#",
+    github: "https://github.com/af133/",
+    get content() {
+      return (
+     <div>
+      <TypographyP className="font-mono text-muted-foreground">
+        Selamat datang di{" "}
+        <span className="font-semibold text-primary">Latansa</span>, sebuah sistem
+        manajemen perusahaan yang dikembangkan untuk membantu proses operasional
+        bisnis produksi bolu. Sistem ini mengintegrasikan pengelolaan data produk,
+        persediaan, penjualan, serta fitur forecasting stok menggunakan algoritma
+        Linear Regression untuk membantu perusahaan memperkirakan kebutuhan stok di
+        masa mendatang berdasarkan riwayat penjualan.
+      </TypographyP>
+
+      <ProjectsLinks live={this.live} repo={this.github} />
+
+      <TypographyH3 className="mt-10 mb-4">
+        🏭 Enterprise Management System
+      </TypographyH3>
+
+      <p className="font-mono leading-7 text-muted-foreground">
+        Latansa merupakan aplikasi berbasis web yang dirancang untuk meningkatkan
+        efisiensi operasional perusahaan. Selain menyediakan fitur manajemen data,
+        sistem ini juga memanfaatkan metode Linear Regression untuk menghasilkan
+        prediksi kebutuhan stok berdasarkan data historis, sehingga membantu proses
+        perencanaan produksi dan mengurangi risiko kehabisan maupun kelebihan stok.
+      </p>
+
+      <SlideShow
+        images={[
+          "/assets/project/scm/1.jpg",
+          "/assets/project/scm/2.jpg",
+          "/assets/project/scm/3.jpg",
+          "/assets/project/scm/4.jpg",
+          "/assets/project/scm/5.jpg",
+          "/assets/project/scm/6.jpg",
+          "/assets/project/scm/7.jpg",
+          "/assets/project/scm/8.jpg",
+          "/assets/project/scm/9.jpg",
+
+        ]}
+      />
+
+      <TypographyH3 className="mt-10 mb-4">
+        🚀 Fitur Utama
+      </TypographyH3>
+
+      <ul className="mt-4 space-y-3 font-mono text-muted-foreground list-disc pl-6">
+        <li>📦 Manajemen data produk dan kategori.</li>
+        <li>🏪 Manajemen persediaan (stok) secara real-time.</li>
+        <li>🛒 Pencatatan transaksi penjualan.</li>
+        <li>📈 Dashboard untuk memantau aktivitas bisnis.</li>
+        <li>📊 Forecasting kebutuhan stok menggunakan algoritma Linear Regression.</li>
+        <li>📅 Prediksi stok berdasarkan histori penjualan.</li>
+        <li>👤 Manajemen pengguna dan hak akses.</li>
+        <li>📱 Antarmuka responsif untuk desktop dan mobile.</li>
+      </ul>
+
+      <TypographyH3 className="mt-10 mb-4">
+        🤖 Implementasi Machine Learning
+      </TypographyH3>
+
+      <p className="font-mono leading-7 text-muted-foreground">
+        Sistem menerapkan metode <strong>Linear Regression</strong> untuk
+        memprediksi jumlah stok yang diperlukan pada periode berikutnya berdasarkan
+        data penjualan sebelumnya. Hasil prediksi membantu perusahaan mengambil
+        keputusan yang lebih tepat dalam proses produksi dan pengadaan bahan,
+        sehingga operasional menjadi lebih efisien.
+      </p>
+
+      <TypographyH3 className="mt-10 mb-4">
+        🎯 Tujuan Pengembangan
+      </TypographyH3>
+
+      <p className="font-mono leading-7 text-muted-foreground">
+        Proyek ini dikembangkan sebagai solusi digital untuk meningkatkan efisiensi
+        operasional perusahaan melalui otomatisasi manajemen data dan penerapan
+        analisis prediktif. Dengan adanya fitur forecasting, perusahaan dapat
+        merencanakan produksi berdasarkan data historis sehingga mengurangi risiko
+        overstock maupun stockout.
+      </p>
+
+      <div className="mt-10 rounded-xl border bg-muted/30 p-6 text-center">
+        <p className="font-mono text-lg font-semibold">
+          &quot;Enterprise Management System with Intelligent Stock Forecasting
+          using Linear Regression.&quot;
+        </p>
+
+        <p className="mt-2 font-mono text-sm text-muted-foreground">
+          — Latansa
+        </p>
+      </div>
+    </div>
+      );
+    },
+  },
 ];
 export default projects;
